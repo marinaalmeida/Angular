@@ -1,0 +1,11 @@
+http://localhost:3000/projetos
+
+###
+
+POST http://localhost:3000/projetos HTTP/1.1
+content-type: application/json
+
+{
+    "name": "projetx",
+    "preco": "R$ 1000"
+}

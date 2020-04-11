@@ -1,13 +1,38 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularProjeto</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+<div class="card">
+  <div class="card-heardr">
+    <div class="float-left">
+    <h4>Projetos</h4>
+  </div>
+  <div class="float-rght">
+    <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo projeto</button>
+  </div>
+</div>
+<div class="card-body">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+      <tr>#</tr>
+      <th>Projetos</th>
+      <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let projeto of Projetos">
+        <td>{{ projeto.id }}</td>
+        <td>{{ projeto.name }}</td>
+        <td>
+          <span class="float-right">
+            <button class="btn btn-outline-warning mb-1 btn-sm">
+              Atualizar
+            </button>
+
+            <button class="btn btn-outline-danger mb-1 btn-sm">
+              Remover
+            </button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
